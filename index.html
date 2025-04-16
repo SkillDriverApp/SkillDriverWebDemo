@@ -95,9 +95,7 @@ body {
 			<div id="status-notice"></div>
 		</div>
 
-		<script src="index.js">
-			window.scrollTo(0, 0);
-		</script>
+		<script src="index.js">	</script>
 		<script>
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":73593568,"index.wasm":1620216},"focusCanvas":false,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
@@ -112,6 +110,7 @@ const engine = new Engine(GODOT_CONFIG);
 	let statusMode = '';
 
 	function setStatusMode(mode) {
+		window.scrollTo(0, 0);
 		if (statusMode === mode || !initializing) {
 			return;
 		}
