@@ -80,6 +80,8 @@ body {
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
 	</head>
+	
+			<!--  ADD BETWEEN </head> and <body> -->
 
 			<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-J14DTXSDN5"></script>
@@ -91,6 +93,18 @@ body {
 		gtag('config', 'G-J14DTXSDN5');
 	</script>
 
+			<!-- Event Functions -->
+
+    <script>
+    function sendGAEvent(eventName, params) {
+        gtag('event', eventName, params);
+		console.log("Calling from Godot: [" +  eventName + "], params: " + params + "]");
+		
+    }
+    </script>
+
+				<!-- END -->
+	
 	<body>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
@@ -108,7 +122,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":71287248,"index.wasm":43016933},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":71287760,"index.wasm":43016933},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
